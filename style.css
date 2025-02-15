@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+IN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.image-generator {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./image/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.image-generator::before{
+    content:" ";
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.image-generator .content{
+    color: #fff;
+    padding: 0 15px;
+    max-width: 760px;
+    text-align: center;
+    position: relative;
+}
+.image-generator h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.image-generator p{
+    color: yellow;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.image-generator .generate-form{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    padding: 6px;
+    margin: 45px 0 15px;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+}
+.generate-form .prompt-input{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    outline:none;
+    border: none;
+    background: none;
+    padding: 0 17px;
+}
+.generate-form .controls{
+    display: flex;
+    height: 100%;
+    gap: 15px;
+}
+.generate-form .img-quantity{
+    outline:none;
+    border: none;
+    backgrounf: none;
+    font-size: 1rem;
+}
+.generate-form .generate-btn{
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #4949E7;
+}
+.input{
+    margin:15px;
+    border:none;
+    outline: none;
+    font-size: 1rem;
+}
+.image-gallery{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    max-width:1250px;
+    margin: 50px 0;
+    margin-left: 80px;
+    justify-content: center;
+}
+.image-gallery .img-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+.image-gallery .img-card img{
+    width: 100%;
+    height: 100%;
+    object-fit : cover;
+}
+.image-gallery .img-card.loading  img{
+    width: 100px;
+    height: 100px;
+
+}
+.image-gallery .img-card .download-btn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.image-gallery .img-card:not(.loading):hover .download-btn{
+    display:flex;
+}
+.image-gallery .img-card .download-btn img{
+    width: 20px;
+    height: 20px;
+}
+@media screen and (max-width: 760px) {
+    .image-generator h1 {
+        font-size: 1 rem;
+    }
+    .image-generator .generate-form {
+        margin-top: 30px;
+        height: 52px;
+        display: block;
+    }
+    .generate-form .controls {
+        height: 40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .generate-form .img-quantity{
+        color: #fff;
+    }
+    .generate-form .img-quantity option{
+        color: #000;
+    }
+    .generate-form .generate-btn {
+        height: 100%;
+    }
+    .image-gallery .img-card:not(.loading) .download-btn{
+        display: flex;
+    }
+    .image-gallery {
+        margin-left: 0;
+        margin-right: 0; 
+        padding: 0 15px; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .image-gallery .img-card{
+        margin-left:0;
+    }
+    .img-quantity{
+        background: transparent;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .image-gallery .img-card{
+        width: 100%;
+    }
+    .generate-form {
+        height: 20px;
+    }
+    .img-quantity{
+        background: transparent;
+    }
+
+}
+
+
